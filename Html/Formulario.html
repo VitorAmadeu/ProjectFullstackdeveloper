@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>git</title>
+    <title>Formulario de Cadastro</title>
 </head>
 <body>
-    <h1>olá git</h1>
+    <form name="signup" onsubmit="" autocomplete="off" target="_blank" method="post" action="#" >
+        <!-- 
+        ansubmit = colocar o codigo java que vai validar o formulario
+        autocomplet = armazena dados caso vc saia e entre na pagina
+        target = ao abrir um link ele abre outra aba
+        method = "pos"->encapsula a informa e envia / "get" -> abre as informações antes de chegar no servidor
+        action = o local para onde os dados vão 
+        -->
+
+        Nome: <input type = "text" name="Nome"/><br>
+        idade: <input type = "number" name="idade"/><br>
+        Senha: <input type = "password" name="Senha"/><br>
+        <button type="submit">Enviar</button><hr>
+    </form>
+    
+    <form>
+        <li><strong>TAG INPUT</strong></li>
+            <label>Text:</label><input type = "text"/>
+            <li><label>capta uma String ou texto</label><br></li>
+            
+            <label>Number:</label><input type = "number" min="0" max="100" step="5"/>
+            <li><label>capta numero.Min estabelece um minimo.MAx esatbelece um maximo.Step Estabelece um intervalo entre os numeros</label><br></li>
+            
+            <label>Button</label><input type="button" value="enviar"/>
+            <li><label>capta informações atraves de um botão.VAlu é o valor ou identidade do botão</label><br></li>
+            
+            <label>Range:</label><input type = "range" min = "15" max="50" value = "26">
+            <li><label>Cria uma regua na qual pode navegar. Min estabelece um minimo.MAx esatbelece um maximo.E o value o valor que o ponteiro deve estar quando iniciar a pagina</label><br></li>
+
+            <label>Cor:</label><input type="color">
+            <li>Escolha de cor<br></li>
+
+            <label>Email:</label><input type = "email">
+            <li>Capt um email com excessões padrão do navegador<br></li>
+
+            <label>URL:</label><input type = "url">
+            <li>Capt uma URL com excessões padrão do navegador<br></li>
+
+            <label>Date:</label><input type = "date">
+            <li>Capt uma data<br></li>
+
+            <label>week:</label><input type = "week">
+            <li>Escolhe a semana do ano<br></li>
+
+            <label>month:</label><input type = "month">
+            <li>Escolhe a mês do ano<br></li>
+
+            <label>checkbox:</label><input type = "checkbox" name = "opcional[]" value = "valor/Nome">
+            <!-- o colchetes ele entende que é uma lista se não ele le somente o ultimo valor-->
+            <!-- o Ratio ele pode colocar o mesmo name ja que ele retorna somente um valor -->
+            <!-- Disable desabilita o checkbox posto após o type-->
+            <li>seleçionar algo ou multiplos dele.O atributo name é obrigatorio 
+                O ratio aceita somente um outro<br></li>
+            
+            <label>hidden:</label><input type = "hidden">
+            <li>não aparece porem manda algo para o servidor<br></li>
+
+            <label>file:</label><input type = "file" multiple>
+            <li>seleciona arquivos. Multiple seleciona mais de um arquivo de uma vez  <br></li>
+
+            <label>Search</label><input type = "search">
+            <li>Faz uma busca ou campo texto<br></li>
+
+            <button type="submit">Enviar</button><hr>
+        </form>
+
+        <li><strong>Tag button<strong></li>
+            <form onsubmit="">
+                <!-- onsubmit ira validar as informações do formulario-->
+                <button type="button">clicavel</button><br>
+                <button type="reset">limpar</button><br>
+                <button type="submit">enviar algo</button><br>
+            </form><hr>
+        
+        <li><strong>Tag Select</strong></li>
+            <form>
+                <select name="role" multiple>
+                    <!-- multiple permite selecionar mais de um-->
+                    <option value="valor que vai para o servidor">valor que a aparece para o ususario</option>
+                    <option value="valor que vai para o servidor">valor que a aparece para o ususario</option>
+                    <option value="valor que vai para o servidor">valor que a aparece para o ususario</option>
+                
+                </select> 
+            </form><hr>
+
+            <label>Mensagem:</label>
+            <textarea name="messagem" rows="10" cols="20"></textarea><!--Colocar um texto grande. Cows e cols define um tatno de linhas e colunas padrão , porém pode ser variavel-->
+            <button type="submit">Enviar</button>
+        
 </body>
 </html>
